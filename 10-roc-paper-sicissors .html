@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock-Paper-Scissorss</title>
+    <link rel="stylesheet" href="styles/10-rock-paper-scissor.css">
+  </head>
+  <body>
+    <p class="title">Rock-paper-Scissors</p>
+
+    <button onclick="PlayGame('Rock')" class="move-button"><img src="images/rock-emoji.png" class="move-icon"></button>
+    <button onclick="PlayGame('Paper')"  class="move-button"><img src="images/paper-emoji.png" class="move-icon"></button>
+    <button onclick="PlayGame('Scissors')" class="move-button"><img src="images/Scissors-emoji.png" class="move-icon"></button>
+    
+    <p class="js-result result"></p>
+    <p class="js-moves"></p>
+    <p class="js-score score"></p>
+    <!--paragraf elementi bloktur. Yani bütün satırı kendi kaplar-->
+     
+     
+     <button onclick="
+     score.Tie=0,
+     score.Lose=0,
+     score.wins=0
+     localStorage.removeItem('score');//resete butonun işleviin yerine getirebilmesi için local storag'ı sıfırlar. Fakat bunu yaptıktan sonra score elemanları null olacağındna hata alırız. Bunu çzömek için de  score default değerler vermeleiyiz
+     updateScore();
+     " class="reset-score-button">Reset Score</button>
+
+    <script src="scripts/10-roc-paper-scissor.js"></script>
+  </body>
+</html>

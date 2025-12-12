@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced Functions</title>
+  </head>
+  <body>
+    <button onclick="" class="js-button">Click</button>
+    <script>
+
+
+
+
+      /*
+     //we gone learn event listener. it let us run some code when we inteact  with the element
+     const buttonElement = document.querySelector('.js-button');
+
+     //it hase two type pf parametre. First parametre is event or what type of interaction we want to listen for. Second parametre is function we wnt to run
+    
+     const evetnListener = () => {
+      console.log('salam2');
+     }
+     
+     buttonElement.addEventListener('click', () => {
+      console.log('salam');
+     })
+     //Above code does the same think onclick attribute however addEventListener has some adventages over using onClick attribute
+     //First advantages is multiple ebent listener for an event
+     
+     buttonElement.addEventListener('click',evetnListener)
+
+    
+     //second advetages is remove an evet from event listener
+      buttonElement.removeEventListener('click',evetnListener)
+     
+      //becasue of the control based advantages we gona use addEventListener insteade of onClick Attribute; 
+     
+     */
+     
+      /*
+       function greeting(){
+        console.log('salam world');
+       }
+       greeting();//call
+
+       const num = 2;
+
+       //function are values 
+
+       const function2 = function greeting(){console.log('salam2 world'); } //peki fonksiyonu değişken olarak saklamda ki arayış ne. Bu şekilde fonksiyonu değişken ile tuttupumuz zaman fonksiyonu nesnenin içine ataibiriz
+
+       console.log(function2);
+       console.log(typeof(function2));
+       function2(); 
+
+       const function3 = function(){console.log('salam3 world'); } // nurada  console.log('salam3 world'); yazan fonksiyona fonksiyon adından değil de function3 değişken ismi ile eriştiğimiz için bu fonksiyon bir anonymous fonksiyondur.
+        
+       const object1={
+        num:2,
+        fun:function(){
+            console.log('salam 4 world')
+        }
+       };
+       object1.fun();
+
+       function display(param){
+        console.log(param);
+       }
+
+       display(2);
+
+       //function be able to take parameter as a function(callback  )
+       function run(param){
+            param();
+       }
+
+       run(function(){
+        console.log('Salam 5 world');
+       });*/
+
+      /*
+      
+       //mow we gona make same practical examples about using function as a values
+       
+       
+       //firstly we gone try setTimeOut function which is allow us the run a function in hte future.
+
+        // it takes two parameter. fİrst one is function which is run in the future and second one is that how long be waite before run the function and its type is milisecond.
+       setTimeout(function(){
+        console.log('time out');
+       }, 5000);
+
+       console.log('next line 1'); // when we run the code, we realize that firstly next line display the consoe than timeout display the console. That reason is that setTime out function is a Asynchronous function .
+       
+       //Asynchronous code: Pc wont' wait for a line to finish  before going to the next line, but inside of the asynchronous is synchronous. Thanks for asynchronous, program doesn't blocked for a single process. 
+       //Synchronous code: Pc willwait for a line to finish  before going to the next line
+
+        setTimeout(function(){
+            console.log('time out 1');
+            console.log('time out 2');
+            setTimeout(function(){
+                    console.log('time out 3')
+                },4000);
+            setTimeout(function(){
+                    console.log('time out 4')
+                },2000)
+       }, 5000);
+
+
+       //secondly, we gone consider setInterval() function. It takes the same parametre with setTimeOut. Parameter of interval function is ru for every spesifik second, such as a loop.
+       setInterval(function(){
+        console.log('interval 1');
+       },4000)
+
+       console.log('next line 2'); 
+
+
+       */
+
+      
+      
+       //now we gone make using of foreach
+
+      //arrow fonksiyonusuz for each kullanımı
+       //['make dinner',
+        //'wash dishes',
+        //'watch youtube'].forEach(function(value, index){
+
+         // if(value = 'wash dishes'){
+            //return;/*continue yerine geçiyor*/
+          //}
+          // console.log(index);
+          //console.log(value);
+       // });
+
+      
+       /*
+      ["make dinner", "wash dishes", "watch youtube"].forEach(
+        (value, index) => {
+          //continue yerine geçiyor
+          if ((value = "wash dishes")) {
+            return;
+          }
+          console.log(index);
+          console.log(value);
+        }
+      );
+
+      //for  each don't have contiune statment, break de for each de yok ve bunu foreach'e uyarlamak zordur. Break kullanılacak bir durumda regular for loop kullanmak daha iyidir.
+
+      //lets consider arrow function
+      const regularFunction = function (param, param2) {
+        console.log("Salam regular");
+        return 5;
+      };
+
+      const arrowFunction = (param, param2) => {
+        console.log("Salam arrow");
+        return 5;
+      };
+
+      arrowFunction();
+
+      //arrow function have some shortcut so regular function dont have.
+
+      // const oneParam=(param)=>{
+      //   console.log(param+2);
+      // }
+
+      const oneParam = (param) => {
+        console.log(param + 2);
+      };
+
+      // const oneLine = (param) =>{
+      //   return 3+2;
+      // }
+      oneParam(2);
+
+      const oneLine = (param) => 3 + 2;
+      console.log(oneLine());
+
+      const object2 = {
+        method: () => {},
+        method: () => {},
+      };
+      */
+   
+      console.log([1,-3,5].filter((value, index)=>
+      {
+        /*if(value >= 0){
+          return true;
+        }else{
+          return false;
+
+          return value>=0;'nun uzun hali
+        }*/
+       
+        return value>=0;
+        
+         // if the filter function return true  it put value in new array, if it return false it doesn't  put value in new array
+      }));
+
+
+      //map transform a array into another array
+      console.log([1,1,3].map((value, index)=>{
+          return value *2 ;
+      }));
+
+       console.log([1,1,3].map(value =>  value *2 /*one line shot cut*/ ));
+   </script>
+  </body>
+</html>

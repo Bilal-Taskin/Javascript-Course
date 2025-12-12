@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+       Booleans
+    </title>
+
+    
+  </head>
+  <body>
+
+    
+    
+    <script>
+    //false, 0, nan, undefined, null içeriklerine bak
+    console.log(2<3 ? 'truthy' : 'falsy'); // ternary   
+
+    console.log(3<5 );
+    console.log(3=='3.00');//bu da çalışır ama türleri farklı olduğu için karmaıklıklara yol açar
+    console.log(3===3);//bunu tercih ederiz
+    console.log(3!==3);
+    
+    false && console.log('hello');
+    
+    const message = 5 && 'hello'
+    console.log(message)
+
+    const curreny = undefined || 'EUR'; 
+    console.log(curreny);
+    
+    if(true){
+        console.log('Hello');
+    }
+    else{
+        console.log('NOt Hello')
+    }
+        </script>
+
+  </body>
+</html>

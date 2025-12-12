@@ -1,0 +1,95 @@
+1-) Web tasarımında Flexbox ve Grid (Izgara) Layout, öğeleri düzenlemek ve sayfa yerleşimleri (layout) oluşturmak için kullanılan iki temel CSS modülüdür. Her ikisi de, eski yöntemlere (float, inline-block, table) göre daha esnek, güçlü ve duyarlı (responsive) tasarımlar yapmayı sağlar.
+
+1.1 = Flexbox (Flexible Box Module), öğeleri tek bir eksen üzerinde (yatay veya dikey bu flex-direction ile belirlenir) hizalamak ve düzenlemek için tasarlanmıştır.
+İdeal Kullanım Alanları:
+
+* Navigasyon menüleri (öğeleri yatayda hizalama).
+* Form elemanları veya buton grupları.
+* Bir kart içindeki başlık, görsel ve metni dikey/yatay olarak ortalama.
+
+1.2 = Grid Layout, öğeleri iki eksen üzerinde (hem yatay satırlar hem de dikey sütunlar) aynı anda düzenlemek için tasarlanmıştır.
+İdeal Kullanım Alanları:
+
+*Tüm sayfa yapısını (Header, Sidebar, Main Content, Footer) oluşturmak.
+*Karmaşık galeriler veya çok sütunlu, düzenli bir içerik ızgarası oluşturmak.
+
+2-) Align-items özelliği, bir Flexbox veya Grid konteynerindeki öğelerin, ikincil eksen (cross axis) boyunca nasıl hizalanacağını belirler.
+
+Ekstra:
+Eğer flex-direction: row ise (varsayılan), align-items dikey hizalamayı kontrol eder.
+Eğer flex-direction: column ise, align-items yatay hizalamayı kontrol eder.
+Grid'de: Blok ekseni boyunca hizalamayı kontrol eder.
+
+Stretch (Varsayılan) = Öğelerin ikincil eksen (cross axis) boyutları, kapsayıcının (container) izin verdiği ölçüde uzatılır ve tam olarak doldurması sağlanır. Öğelere yükseklik veya genişlik (ikincil eksene bağlı olarak) belirtilmediyse bu değer devreye girer.
+
+Center = Öğeler, ikincil eksen boyunca ortalanır. Öğelerin boyutları, içeriklerinin gerektirdiği minimum boyutta kalır ve kapsayıcıyı doldurmak için uzatılmazlar.
+
+
+3-)📦 Temel display Değerleri
+3.1 = display: block
+Davranış: Öğeyi tam bir blok olarak gösterir.
+
+Özellikleri:
+
+Tüm satırı kaplar: Kendisinden önce ve sonra otomatik olarak yeni bir satıra geçer.
+
+Boyutlandırma: width (genişlik) ve height (yükseklik) değerleri uygulanabilir.
+
+Örnekler: Varsayılan olarak kullanılan öğeler: <div>, <p>, <h1> - <h6>, <ul>, <li>.
+
+3.2 = display: inline
+Davranış: Öğeyi, metin gibi akış içinde, satır içi olarak gösterir.
+
+Özellikleri:
+
+Satırda Kalır: Yeni bir satıra geçmez, yanındaki öğeyle aynı satırda kalır.
+
+Boyutlandırma Kısıtlılığı: width ve height değerleri uygulanamaz. Sadece içeriği kadar yer kaplar.
+
+Örnekler: Varsayılan olarak kullanılan öğeler: <span>, <a>, <strong>, <em>.
+
+3.3 = display: inline-block
+Davranış: Hem satır içi hem de blok özelliklerini birleştirir.
+
+Özellikleri:
+
+Satırda Kalır: Tıpkı inline gibi, yeni bir satıra geçmez, diğer öğelerle aynı satırda kalır.
+
+Boyutlandırma Serbestliği: Tıpkı block gibi, width ve height değerleri uygulanabilir.
+
+Kullanım Amacı: Yan yana sıralanması gereken ancak boyutlandırma ve boşluk (padding/margin) kontrolüne ihtiyacınız olan öğeler için idealdir.
+
+🛠️ Yerleşim (Layout) Amaçlı Değerler
+3.4 = display: flex
+Davranış: Öğeyi bir Flexbox (Esnek Kutu) Konteyneri haline getirir.
+
+Özellikleri:
+
+İçindeki çocuk öğelerin (items) tek bir eksen (yatay veya dikey) boyunca düzenlenmesini, hizalanmasını ve boşluklarının dağıtılmasını sağlar.
+
+Duyarlı (responsive) bileşenler oluşturmak için modern bir yaklaşımdır.
+
+3.5 = display: grid
+Davranış: Öğeyi bir Grid (Izgara) Konteyneri haline getirir.
+
+Özellikleri:
+
+İçindeki çocuk öğelerin iki eksen (satır ve sütun) boyunca, belirlenen bir ızgara yapısına göre yerleştirilmesini sağlar.
+
+Tüm sayfanın ana yerleşim planını (layout) oluşturmak için idealdir.
+
+3.6 = display: none
+Davranış: Öğeyi tamamen gizler ve yerleşimden (layout) kaldırır.
+
+Özellikleri:
+
+Öğe, sayfada hiç yokmuş gibi davranır; herhangi bir yer kaplamaz veya etkileşime girmez.
+
+Görünürlüğü değiştiren diğer bir özellik olan visibility: hidden'dan farkı: visibility: hidden öğeyi gizler ancak yerini boş bırakır. display: none ise öğeyi tamamen kaldırır.
+
+3.7 = display: contents (Gelişmiş)
+Davranış: Öğenin kendisini ortadan kaldırır, ancak içeriklerini (çocuk öğelerini) korur.
+
+Özellikleri:
+
+Öğeyi bir ebeveyn olarak sayfa yerleşiminden çıkarır, ancak çocuk öğelerinin doğrudan ebeveyninin (yani bir üst seviye konteynerin) çocuklarıymış gibi davranmasını sağlar. Grid veya Flexbox yapılarında çok kullanışlıdır.

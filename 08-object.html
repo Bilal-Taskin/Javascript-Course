@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Object</title>
+  </head>
+  <body>
+    
+
+    
+
+    <script>
+      //const a ={}  javascripte  {}'nun anlamı  nesne
+      const a ={
+        name:'Sock',
+        price:1500,
+        ['amount'] : 150,
+
+        stars:{ //nested object
+          stars:4.5,
+          count:90
+        },
+
+        fun: function function1(){
+          console.log('function in object')
+        }
+    }
+    /*
+    // console.log(typeof(a));
+    // console.log(a.name);
+    // console.log(a.price);
+
+    // a.name = 'cotton sock';
+    // console.log(a)
+
+    // a.newProperty = true;
+    //  console.log(a) 
+    //  delete a.newProperty;
+    //   console.log(a)
+
+   console.log(a.name);
+   console.log(a['name']);
+   console.log(a.amount);//bu notasyonda nesnenin olmayan bir verisi çağırıldığında hata veriri
+   console.log(a['amount']);//bu notasyonda nesnenin olmayan bir verisi çağırıldığında hata yerine undefiened verir ayrıca bu notasyon kullanımı nesneye olmayan bir veriyi de ekleyebilme imkanı sunuyor
+
+   console.log(a.stars.count)
+
+   a.fun();
+     */ 
+    
+    
+     /*
+
+   //Json(JavaScript Object notation) syntax javascript ile benzer ama daha az özelliği var, bütün veri türlerini string formatta alır,içinde  fonksiyonları desteklemez(a nesnesinde oludğu gibi içine fonksiyon yazamasın ve JS den farklı olarak bütün programlama dilleri tarafından anlaşılabilir) 
+
+   //Built-in json object javascript nesnelerini json objelerine dnüştürmeye yarıyor(JSON.stringify())
+
+   console.log(typeof JSON.stringify(a));
+   console.log(JSON.stringify(a));
+
+   //Jsondan Javascrpite çevirmek için Json.Parse() kuulanılır
+   const jsonString = JSON.stringify(a)
+   console.log(typeof JSON.parse(jsonString))
+   console.log(JSON.parse(jsonString))
+
+  //  local storage verileri daha kalıcı depolamamızı sağlar. Örneğik rock-pepar-scissor da ekran yenilenmdi mi bütün score kayıtları siliniyor çünkü skor local depolamada tutulmuyor. Local storage sayfa yenilendiğinde verilerin silinmemsini sağlıyor. Aşağıda rock-pepar-scissor da local storage kullanım örenği var.
+
+  //   set.ıtem v eget.ıtem kullanılıarak bu işlem yapılır
+
+
+  //      localStorage.setItem('message', 'hello'); //ilk parametre veriye hangi isimle erişeceğimizi, ikinvi parametre ise localde tutmak istediğimiz değeri belirler. Local storage only support strings. 
+
+  //      localStorage.setItem('score', JSON.stringify(score));  local storage sadece string destkelediği için strigfiy işlemini yaptık
+
+  //      console.log( JSON.parse(localStorage.getItem('score'))); tekrar javascripte çevirdik
+  //      console.log(localStorage.getItem('message'));
+  
+  */
+    
+  /*  
+  
+  // strinler de objecr gibi davranır(aslında onjedirler) ve propertyleir ve fonksiyonları olabilir. Bunu javascripte autoboxing olarak adlandırmışlar 
+    console.log('Hello'.length);
+
+    //Referans copyByReferans aşağıda analtılmış
+    const object1 = {
+      message:'Hello'
+    }
+
+    const object2 = object1; //copy by referance
+
+    object1.message='Good Job';
+    console.log(object1.message);
+    console.log(object2.message);
+
+    const object3={
+      message:'Good job'
+    }
+    //nesnelere karşılaştırılmasında değerleri değil referansları karşılaştırılır
+    console.log(object1 === object3);
+    console.log(object1 === object2)
+
+    //value ismi ve nesne ismi aynı ise destructuring kısa yol kullanılırak atama yapılabilir
+    const object4 ={
+      message:'Hello',
+      price:30
+    
+    }
+    // const message = object4.message; bunun yerine aşağıdaki kısa yol kullanılır
+    const {message, price} = object4;
+    console.log(message, price);
+
+    //şimdi ise short-hand kısa yolunu göstereceğiz. Eğer bir property'i ve değişken ismi aynı ise  sadece type' kullanabiliriz
+    
+    const object5 ={
+      //message:message //bu message object4 ten gelir
+      message,
+      
+      // method: function function1(){
+      //   console.log('method');
+      // }
+
+      method(){
+        console.log('method')
+      }
+    };
+
+      console.log(object5);
+      object5.method();
+
+*/
+    
+    </script>
+  </body>
+</html>

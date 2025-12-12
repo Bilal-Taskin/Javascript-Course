@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dom</title>
+  </head>
+  <body>
+    
+    <button>Save</button>
+    <button class="js-button">Save2</button>
+
+    
+
+    <script>
+    
+      console.log(document.title)
+      document.title='Changed';
+
+/*
+    //document nesnesi we sayfası ile bağlıdır
+    //document objesinin fonksiyonları da vardır ama bunu bu derseten sonra göreceğiz
+    
+    document.body.innerHTML='Hello';
+    document. title='Good Job';
+    */
+
+/*
+      //document.body elementi özel bir elementdir çünkü body kısmında bulunan html etiketlerine script tarafından erişmemize yarar
+      console.log(document.body);
+
+      //html elementlerie script tarafında erişeiblmemiz onları javascript nesnesine dönüştürebilmemize olanak sağlar
+      console.log(typeof document.body); // burada olduğu gibi
+
+      //innerHTML body içindeki bütün html'leri control eder, aslında innerhtml ilgili yapının button, body vs. sahip olduğu htmllere erişibilir
+      console.log(document.body.innerHTML);
+
+      document.body.innerHTML='Changed'; // incele kısmındaki bütün body elemenleri yerine changes yazdırır
+      document.body.innerHTML='<button>GoodJob</button>';//artık bodydeki bütün html kodu bu buton
+*/
+      
+/*
+//document.body bütün body elemanlarıni Javascript içine erişilebilir yapıyor.  Document.querySelector() ise istenen, spesifik elemanları Javascriptten erişlbilir yapıyor.
+console.log(document.querySelector('button').innerHTML);
+document.querySelector('button')
+  .innerHTML='changed';
+
+  //ekrenad aikinic bir button varsa böyle erişilir. Ayrıca aşağıda bosyden aldığımız etiketi variable olarak kullandık.
+  const   buttonElement = document.querySelector('.js-button ').innerHTML;
+  console.log(buttonElement);
+  */
+  
+
+
+   
+
+
+    
+    </script>
+  </body>
+</html>
